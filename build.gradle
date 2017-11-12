@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        // Sdk and tools
+        minSdkVersion = 21
+        targetSdkVersion = 27
+        compileSdkVersion = 27
+        buildToolsVersion = '26.0.2'
+
+        // App dependencies
+        kotlinVersion = '1.1.51'
+        supportLibraryVersion = '27.0.1'
+        constraintLayoutVersion = '1.1.0-beta3'
+        lifeCyclesRuntimesVersion = '1.0.0'
+        lifeCyclesExtensionsVersion = '1.0.0-rc1'
+        lifeCyclesCompilerVersion = '1.0.0-rc1'
+        lifeCyclesReativeStreamsVersion = '1.0.0-rc1'
+        firebaseVersion = '11.4.2'
+
+        timberVersion = '4.5.1'
+
+        junitVersion = '4.12'
+        mockitoVersion = '2.7.21'
+        hamcrestVersion = '1.3'
+        runnerVersion = '0.5'
+        rulesVersion = '0.5'
+        espressoVersion = '2.2.2'
+        robolectricVersion = '3.4'
+    }
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
